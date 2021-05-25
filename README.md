@@ -12,7 +12,7 @@ The idea is to use semaphores that behave in FIFO manner, i.e. the process which
 
 Below is the C++ style code for a queue, and a Semaphore based on it:
 
-```
+```C++
 //node for queue
 struct Node
 {
@@ -136,7 +136,7 @@ At the end, it releases the ``inSemaphore`` allowing further processes to procee
 
 Below is the C++ style pseudo-code for the above logic:
 
-```
+``` C++
 Semaphore *inSemaphore = new Semaphore();
 Semaphore *outSemaphore = new Semaphore();
 Semaphore *writerSemaphore = new Semaphore();
@@ -198,8 +198,6 @@ void writer(int pid)
     //
 
     inSemaphore->signal();          //release inSemaphore
-
-    //
 }
 
 ```
