@@ -8,7 +8,7 @@ The third problem known as **Starve-Free Readers-Writers Problem** requires a so
 
 ## **The Idea:**
 
-The idea is to use semaphores that behave in FIFO manner, i.e. the process which started its wait first, will get released from the semaphore first. Also, we will ensure that once a writer is waiting, no newly arrived reader gets to access the resource, this ensures no starvation for writers. While the FIFO nature ensures no starvation for readers, thereby making this a feasible solution for the **Starve-Free Readers-Writers Problem**.
+The idea is to use semaphores that behave in FIFO manner, i.e. the process which started its wait first, will get released from the semaphore first. Also, we will ensure that once a writer is waiting, no newly arrived reader gets to access the resource, this ensures no starvation for writers. On the other hand, the FIFO nature ensures no starvation for readers, thereby making this a feasible solution for the **Starve-Free Readers-Writers Problem**.
 
 Below is the C++ style code for a queue, and a Semaphore based on it:
 
